@@ -1,0 +1,17 @@
+﻿{
+  "name": "example-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+    "tasks.max": "1",
+    "database.hostname": "sqlserver",
+    "database.port": "1433",
+    "database.user": "sa",
+    "database.password": "Pass123123",
+    "database.dbname": "HatDb",
+    "database.server.name": "exampleserver",
+    "schema.include.list": "dbo",
+    "table.whitelist": "dbo.Hats",
+    "database.history.kafka.bootstrap.servers": "kafka:9092",
+    "database.history.kafka.topic": "dbhistory.fullfillment"
+  }
+}
